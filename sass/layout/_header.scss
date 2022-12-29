@@ -1,0 +1,159 @@
+@use "../foundation/mixin"as s;
+@import "../foundation/variable";
+
+.header {
+    background: #6B4573;
+    opacity: .8;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    box-sizing: border-box;
+
+    .contents__inner {
+        position: relative;
+        max-width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            position: relative;
+            width: 150px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .g-nav {
+
+            @include s.mobile {
+                background: rgba(0, 0, 0, .8);
+                margin: 0;
+                padding: 0;
+                top: 0;
+                position: fixed;
+                z-index: 9999;
+                height: 100%;
+                overflow-y: scroll;
+
+                &.open {
+                    right: -180%;
+                }
+
+                ul li a {
+                    list-style: none;
+                    color: #fff;
+                }
+
+                &.open.active {
+                    right: 0px;
+                    transition: .5s ease;
+
+                    ul {
+                        margin-left: 20%;
+                        padding-top: 100px;
+                        width: 200px;
+
+                        li {
+                            padding: 15px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        ul {
+            @include s.pc {
+                display: flex;
+                box-sizing: border-box;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+
+                li:not(:last-of-type) {
+                    margin-right: 50px;
+                }
+
+                li a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                .button {
+                    background: #442D49;
+                    box-sizing: border-box;
+                    height: 60px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 60px;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .humburger-menu {
+        display: none;
+        position: relative;
+        background: #fff;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        z-index: 999999;
+
+        span {
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            left: 14px;
+            height: 3px;
+            border-radius: 2px;
+            background: $sub-color;
+            width: 45%;
+        }
+
+        span:nth-of-type(1) {
+            top: 15px;
+        }
+
+        span:nth-of-type(2) {
+            top: 23px;
+        }
+
+        span:nth-of-type(3) {
+            top: 31px;
+        }
+
+        &.change span:nth-of-type(1) {
+            top: 18px;
+            left: 10px;
+            transform: translateY(6px) rotate(-45deg);
+            width: 60%;
+        }
+
+        &.change span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        &.change span:nth-of-type(3) {
+            top: 30px;
+            left: 10px;
+            transform: translateY(-6px) rotate(45deg);
+            width: 60%;
+        }
+
+        @include s.mobile {
+            display: block;
+
+        }
+    }
+}

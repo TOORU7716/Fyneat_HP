@@ -1,0 +1,217 @@
+@use "../foundation/mixin"as s;
+
+.company-page {
+    &__main--view {
+        padding-top: 100px;
+        background: #704376;
+        margin: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .section__Subtitle {
+        margin-top: 20px;
+    }
+
+    // mission
+    .mission {
+        .section__contents {
+            display: flex;
+
+            @include s.sp {
+                flex-wrap: wrap-reverse;
+            }
+
+            p:nth-of-type(2) {
+                margin-top: 50px;
+            }
+        }
+
+        .section__contents--text {
+            margin-top: 30px;
+
+            p {
+                font-size: clamp(12px, 2vw, 16px);
+            }
+        }
+    }
+
+    // vision
+    .vision {
+        margin-top: 100px;
+
+        .section__contents {
+            display: flex;
+
+            @include s.sp {
+                flex-wrap: wrap-reverse;
+            }
+        }
+
+        .section__contents--text {
+            margin-top: 30px;
+
+            p {
+                font-size: clamp(12px, 2vw, 16px);
+            }
+        }
+
+        .section__contents--pic img {
+            transform: scale(-1, 1);
+        }
+    }
+
+    // message
+    .message {
+        margin-top: 200px;
+
+        h2 {
+            color: #A291A5;
+            position: relative;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+
+            ::after {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                top: -18vh;
+                left: 50%;
+                width: 1px;
+                height: 100px;
+                background-color: #A291A5;
+            }
+        }
+
+        .section__Subtitle {
+            text-align: center;
+
+            span {
+                display: inline-block;
+            }
+        }
+
+        .message__text {
+            margin-top: 30px;
+            line-height: 2;
+            letter-spacing: .5px;
+            font-size: clamp(12px, 2vw, 16px);
+
+            span {
+                display: inline-block;
+            }
+
+            .space {
+                margin-top: 50px;
+
+                @include s.sp {
+                    margin-top: 30px;
+                }
+            }
+
+            .representative {
+                text-align: right;
+                font-weight: bold;
+                margin-top: 50px;
+
+                span {
+                    margin-left: 20px;
+                    font-size: 32px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+    }
+
+    // company
+    .company {
+        margin-top: 100px;
+
+        .contents__inner {
+            display: flex;
+
+            @include s.mobile {
+                display: block;
+            }
+        }
+
+        &__contents--title {
+            width: 30%;
+
+            @include s.mobile {
+                width: 100%;
+            }
+        }
+
+        &__contents--info {
+            margin-top: 50px;
+            width: 70%;
+            background: #FBFAFD;
+            padding: 80px 100px;
+
+            @include s.mobile {
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            dl {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            dt {
+                width: 20%;
+                border-right: 1px solid #000;
+                font-size: clamp(12px, 3vw, 24px);
+                font-weight: 600;
+                padding-top: 50px;
+
+                ul li {
+                    list-style: none;
+
+                }
+            }
+
+            dt:nth-of-type(1) {
+                padding-top: 5px;
+            }
+
+            dt:nth-of-type(2) {
+                padding-bottom: 100px;
+            }
+
+            dt:nth-of-type(6) {
+                padding-bottom: 40px;
+            }
+
+            dd {
+                width: 70%;
+                padding-left: 5%;
+                font-size: clamp(12px, 3vw, 20px);
+                padding-top: 50px;
+                box-sizing: border-box;
+
+                ul li {
+                    list-style: none;
+                    line-height: 1.5;
+                }
+            }
+
+            dd:nth-of-type(1) {
+                padding-top: 5px;
+            }
+
+        }
+    }
+
+    .map {
+        margin-top: 100px;
+    }
+}

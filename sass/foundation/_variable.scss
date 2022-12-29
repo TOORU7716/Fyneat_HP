@@ -1,0 +1,34 @@
+@use "../foundation/mixin"as mixin;
+
+// フォント関係
+$font-family: 'Noto Sans JP',
+sans-serif;
+
+// カラー情報
+$main-color:#8c93c8;
+$sub-color:#352f2d;
+
+.contents__inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    @include mixin.sp {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    &--small {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 25px;
+        box-sizing: border-box;
+
+        @include mixin.sp {
+            padding: 0 20px;
+        }
+    }
+}

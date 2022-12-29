@@ -1,0 +1,376 @@
+@use "../foundation/mixin"as s;
+
+.recruit-page {
+    &__main--view {
+        padding-top: 100px;
+        background: #704376;
+        margin: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .vision {
+        .section__Subtitle {
+            margin-top: 50px;
+        }
+
+        .contents__text {
+            margin-top: 50px;
+
+            p {
+                line-height: 2;
+                font-size: clamp(12px, 2vw, 16px);
+            }
+
+            p:nth-of-type(3) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .feature {
+        margin-top: 200px;
+
+        .section__Subtitle {
+            text-align: center;
+            margin-top: 30px;
+
+            p {
+                position: relative;
+                display: inline-block;
+            }
+
+            p::before {
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                content: "";
+                background: #F7E55A;
+                width: 100%;
+                height: 10px;
+            }
+        }
+
+        .feature-1,
+        .feature-2,
+        .feature-3 {
+            margin-top: 100px;
+
+            .section__Subtitle {
+                text-align: left;
+            }
+
+            .contents__text {
+                display: flex;
+                align-items: center;
+
+                p {
+                    width: 50%;
+                    line-height: 2;
+                    font-size: clamp(12px, 2vw, 16px);
+                }
+
+                .contents__pic {
+                    width: 50%;
+                }
+
+                img {
+                    width: 100%;
+                }
+
+                @include s.sp {
+                    flex-wrap: wrap-reverse;
+
+                    p {
+                        width: 100%;
+                    }
+
+                    .contents__pic {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .job-description {
+        margin-top: 100px;
+        padding: 0 25px;
+
+        @include s.sp {
+            padding: 0 20px;
+        }
+
+        .contents__inner {
+            background: #FBFAFD;
+            padding: 20px 30px;
+            margin-top: 100px;
+        }
+
+        .section__Subtitle {
+            text-align: center;
+            margin-top: 30px;
+
+            p {
+                position: relative;
+                display: inline-block;
+            }
+
+            p::before {
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                content: "";
+                background: #F7E55A;
+                width: 100%;
+                height: 10px;
+            }
+        }
+
+        table {
+            margin-top: 50px;
+            font-size: clamp(12px, 2vw, 16px);
+
+            th {
+                width: 25%;
+                text-align: left;
+
+                @include s.sp2 {
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                    padding-top: 20px;
+                }
+
+            }
+
+            td {
+                line-height: 2;
+                padding: 30px 0;
+
+                @include s.sp2 {
+                    width: 100%;
+                    display: block;
+
+                }
+            }
+        }
+
+        .intern table {
+            margin-top: 50px;
+        }
+
+        .intern table tr:nth-of-type(3) {
+            border: none;
+        }
+
+        table tr:not(:nth-of-type(4)) {
+            border-bottom: 2px solid #000;
+        }
+
+        .consultant,
+        .backoffice-support-member {
+
+            text-align: left;
+        }
+
+        .intern {
+            margin-top: 100px;
+
+            .section__Subtitle {
+                text-align: left;
+            }
+        }
+
+
+
+    }
+
+    .member {
+        margin-top: 100px;
+
+        &-contents {
+            background: #F8F5F9;
+            color: #68516C;
+            padding: 100px 50px;
+
+            h3 {
+                position: relative;
+            }
+
+            h3::after {
+                content: "";
+                width: 40px;
+                height: 2px;
+                background: #F7E660;
+                position: absolute;
+                display: inline-block;
+                bottom: -15px;
+                left: 0;
+            }
+
+            h2 {
+                margin-top: 30px;
+                color: #68516C;
+                font-weight: normal;
+            }
+
+            p {
+                margin-top: 10px;
+            }
+
+            .list-of-consultants {
+                display: flex;
+                margin-top: 30px;
+                box-sizing: border-box;
+                padding-bottom: 50px;
+
+                @include s.sp {
+                    display: block;
+                    padding-bottom: 50%;
+                }
+
+                .item {
+                    width: 100%;
+                    position: relative;
+
+                    &:not(:nth-of-type(1)) {
+                        @include s.sp {
+                            margin-top: 80%;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .career {
+                        width: 95%;
+                        height: 100%;
+                        background: #fff;
+                        position: absolute;
+                        bottom: -80%;
+                        left: 0;
+                    }
+                }
+            }
+
+            .item:not(:nth-of-type(3)) {
+                margin-right: 40px;
+            }
+
+        }
+    }
+
+    .process {
+        margin-top: 100px;
+
+        .section__Subtitle {
+            text-align: center;
+            margin-top: 30px;
+
+            p {
+                position: relative;
+                display: inline-block;
+            }
+
+            p::before {
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                content: "";
+                background: #F7E55A;
+                width: 100%;
+                height: 10px;
+            }
+        }
+
+        table {
+            margin-top: 100px;
+            font-size: clamp(12px, 2vw, 16px);
+
+            th {
+                width: 35%;
+                text-align: left;
+
+                @include s.sp2 {
+                    width: 100%;
+                    text-align: center;
+                    display: block;
+                    padding-top: 20px;
+                }
+            }
+
+            th:nth-of-type(1) {
+                @include s.sp2 {
+                    padding-bottom: 20px;
+                }
+            }
+
+            td {
+                line-height: 2;
+                width: 65%;
+
+                @include s.sp2 {
+                    width: 100%;
+                    text-align: left;
+                    display: block;
+                    padding: 20px 0;
+                }
+
+                :nth-of-type(3),
+                :nth-of-type(7) {
+                    @include s.sp2 {
+                        text-align: center;
+                    }
+                }
+            }
+
+            tr {
+                border-bottom: 2px solid #000;
+            }
+
+            tr:nth-of-type(4)>td,
+            tr:nth-of-type(5)>td {
+                @include s.sp2 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .inquiry-form {
+        margin-top: 100px;
+
+        .section__Subtitle {
+            text-align: center;
+            color: #fff;
+            background: #8259B6;
+            padding: 30px 0;
+            font-size: 32px;
+        }
+
+        .contents__inner {
+            padding-bottom: 100px;
+            background: #F4F4F4;
+
+        }
+
+        ul {
+            text-align: center;
+            background: #fff;
+            padding: 10%;
+            margin: 100px auto 0 auto;
+            height: auto;
+
+            li {
+                font-size: clamp(16px, 5vw, 36px);
+                font-weight: bold;
+                line-height: 3;
+            }
+
+        }
+    }
+}

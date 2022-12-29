@@ -1,0 +1,80 @@
+@use "../foundation/mixin"as s;
+
+.service-page {
+
+    &__main--view {
+        padding-top: 100px;
+        background: #704376;
+        margin: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .intro {
+        .section__Subtitle {
+            text-align: center;
+
+            span {
+                font-size: 40px;
+                border-bottom: solid;
+                border-color: #F7E55A;
+                border-width: 10px;
+            }
+        }
+
+        .section__contents {
+            margin-top: 50px;
+
+            p {
+                font-size: clamp(12px, 2vw, 16px);
+            }
+
+
+            p:nth-of-type(2) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .business {
+        .section__contents {
+            display: flex;
+            align-items: start;
+            margin-top: 100px;
+
+            @include s.mobile {
+                flex-wrap: wrap;
+            }
+
+            &--text {
+                p:nth-of-type(2) {
+                    margin-top: 50px;
+                }
+
+                @include s.mobile {
+                    width: 100%;
+                }
+            }
+
+            &--pic {
+
+                @include s.mobile {
+                    width: 100%;
+                }
+            }
+
+
+        }
+    }
+
+    .work-flow {
+        margin-top: 100px;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+}
